@@ -4,26 +4,22 @@ import cv2
 
 
 def image_processing():
-    img = cv2.imread('img_test.jpg')
-    #cv2.imshow('image', img)
-    w, h = img.shape[:2]
-    #(cX, cY) = (w // 2, h // 2)
-    #M = cv2.getRotationMatrix2D((cX, cY), 45, 1.0)
-    #rotated = cv2.warpAffine(img, M, (w, h))
-    #cv2.imshow('rotated', rotated)
+    img = cv2.imread('variant-8.jpg')
+    # w, h = img.shape[:2]
+    # (cX, cY) = (w // 2, h // 2)
+    # M = cv2.getRotationMatrix2D((cX, cY), 45, 1.0)
+    # rotated = cv2.warpAffine(img, M, (w, h))
+    # cv2.imshow('rotated', rotated)
 
-    #cat = img[250:580, 20:280]
-    #cv2.imshow('image', cat)
+    print(img.shape)
+    # cat = img[775:1200, 100:280]
+    cv2.imshow('image', img)
 
-    #r = cv2.selectROI(img)
-    #image_cropped = img[int(r[1]):int(r[1] + r[3]), int(r[0]):int(r[0] + r[2])]
-    #cv2.imshow('cropped', image_cropped)
+    # r = cv2.selectROI(img)
+    # image_cropped = img[int(r[1]):int(r[1] + r[3]), int(r[0]):int(r[0] + r[2])]
+    # cv2.imshow('cropped', image_cropped)
 
-    cv2.line(img, (0, 0), (580, 600), (255, 0, 0), 5)
-    cv2.rectangle(img, (384, 10), (580, 128), (0, 252, 0), 3)
-    cv2.putText(img, 'Lab. No 8', (10, 500), cv2.FONT_HERSHEY_SIMPLEX, 3,
-                (0, 0, 255), 2, cv2.LINE_AA)
-    cv2.imshow('img', img)
+    # cv2.imshow('img', img)
 
 
 def video_processing():
@@ -62,8 +58,8 @@ def video_processing():
 
 
 if __name__ == '__main__':
-    #image_processing()
-    video_processing()
+    image_processing()
+    # video_processing()
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
